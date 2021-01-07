@@ -33,7 +33,7 @@ public class VendingMachine {
 		this.model = model;
 		this.itemsOfMachine = itemsOfMachine;
 	}
-	// 생성자 오버로딩
+	// 생성자 오버로딩 **
 	VendingMachine(String brand, String model, String itemsOfMachine, Customer customer){
 		this.brand = brand;
 		this.model = model;
@@ -68,14 +68,12 @@ public class VendingMachine {
 	}
 	
 
-	public boolean checkId18(boolean requiredID) {
+	public String checkId18(boolean requiredID) {
 		
 		if (requiredID) {
-			printLine("신분증이 필요합니다.");
-			return true;
+			return "신분증이 필요합니다.";
 		} else {
-			printLine("신분증이 필요하지 않습니다.");
-			return false;
+			return "신분증이 필요하지 않습니다.";
 		}
 	}
 	
@@ -107,11 +105,11 @@ public class VendingMachine {
 	public String getPaymentTool(int toolNum){
 		
 		if (this.availablePayment == 1) {
-			return "cash";
+			return "현금";
 		} else if(this.availablePayment == 2) {
-			return "card";
+			return "카드";
 		} else if (this.availablePayment == 3) {
-			return "both";
+			return "현금 & 카드";
 		} else {
 			return "new payment";
 		}
@@ -126,7 +124,6 @@ public class VendingMachine {
 		printLine("모델명: " + getModel());
 		printLine("아이템: " + getItemsOfMachine());
 		printLine("장소: " + getAddress());
-		printNoLine("품명:	");		
 		printLine("자판기 설치 년도: " + getBuiltYear());
 		printLine("결제: " + getPaymentTool(getAvailablePayment()));
 		printLine("신분증 요구: " + checkId18(isRequiredID()));
@@ -160,7 +157,7 @@ public class VendingMachine {
 			printNoLine(costAndNum[1][j] + "\t");
 		}
 		printLine();
-		printLine("자판기 수익: " + getTotalMoney() + "원");
+//		printLine("자판기 수익: " + getTotalMoney() + "원");
 		printLine("-----  END  -----");
 		printLine();
 	}

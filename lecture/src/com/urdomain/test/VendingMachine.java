@@ -41,6 +41,7 @@ public class VendingMachine {
 		this.customer = customer;
 		this.customerMoney = customer.getMyMoney();
 	}
+	// 생성자 오버로딩
 	VendingMachine(String brand, String model, String itemsOfMachine, Customer customer, int[][] costAndNum, String[] purchasedItems, String address, int availablePayment, int builtYear, Components[] beverages){
 
 		this.brand = brand;
@@ -58,15 +59,7 @@ public class VendingMachine {
 	
 	// ----------  methods -----------
 	
-	// total money 구하기
-	/*
-	public int calcuateTotalMoney(int[] cost, int[] items) {
-		for (int idx: cost) {
-			totalMoney += cost[idx] * items[idx];
-		}
-		return totalMoney;
-	}
-	*/
+	
 	public int calcuateTotalMoney(int[] cost, int[] arrItems) {
 		for (int idx: cost) {
 			totalMoney += cost[idx] * arrItems[idx];
@@ -127,7 +120,7 @@ public class VendingMachine {
 	
 
 	// return : void 기본정보 보여준다.
-	public void showDetailVendingMachine() {
+	public void showVendingMachineInforamtion() {
 		printLine("===================================================================");
 		printLine("브랜드: " + getBrand());
 		printLine("모델명: " + getModel());
@@ -143,7 +136,7 @@ public class VendingMachine {
 	
 	
 	// vending machine status 
-	public void showVendingMachine() {
+	public void showVendingMachineStatus() {
 		printLine("--- 자판기 상태 ---");
 		printNoLine("번호 :	");
 		for (int i = 1; i <= beverages.length ;i++) {
@@ -171,6 +164,7 @@ public class VendingMachine {
 		printLine("-----  END  -----");
 		printLine();
 	}
+	
 	// 고객으로 부터 돈을 받는다.
 	public void inputMoneyByCustomer(int moneyFromCustomer) {		
 		inputMoney += moneyFromCustomer;
@@ -178,7 +172,7 @@ public class VendingMachine {
 		setInputMoney(inputMoney);
 	}
 	
-	// 특정 음료수 "한 개"를 선택받는다. 
+	// Process - 특정 음료수 "한 개"를 선택받는다. 
 	public void selectItems(String selectedItem) {
 		if (selectedItem =="No item") {
 			return;
@@ -221,16 +215,8 @@ public class VendingMachine {
 				costAndNum[1][idx]--;
 			}
 		}
-		
 	}
 	
-	public int getArrayIdx() {
-		return arrayIdx;
-	}
-
-	public void setArrayIdx(int arrayIdx) {
-		this.arrayIdx = arrayIdx;
-	}
 
 	// intput number -> output -> item
 	public String numberToString(int itemNumber) {
@@ -261,6 +247,14 @@ public class VendingMachine {
 	
 
 	// get || set 함수
+	public int getArrayIdx() {
+		return arrayIdx;
+	}
+	
+	public void setArrayIdx(int arrayIdx) {
+		this.arrayIdx = arrayIdx;
+	}
+	
 	public String[] getPurchasedItems() {
 		return purchasedItems;
 	}

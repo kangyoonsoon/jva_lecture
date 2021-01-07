@@ -32,9 +32,9 @@ public class VendingMachineExample {
 		// 사먹기 전 구매자
 		printLine(customer1);
 		// 자판기 정보 
-		vm.showDetailVendingMachine();
+		vm.showVendingMachineInforamtion();
 		// 자판기 상태 
-		vm.showVendingMachine();
+		vm.showVendingMachineStatus();
 		
 		// 제품 판매 프로세스
 			// 금액 입력을 한다 - 돈을 자판기에 투입한다.
@@ -62,7 +62,7 @@ public class VendingMachineExample {
 		// 제품을 선택- 물건이 나오고
 			// 잔액이 나오고 - (거스름돈 버튼을 누른다.)
 
-		vm.showVendingMachine();
+		vm.showVendingMachineStatus();
 		printLine("거스름돈: " + vm.getChange() + "원\n");
 		// 제품이 나오고 나서 구매자, 자판기 상태
 		printLine(customer1);

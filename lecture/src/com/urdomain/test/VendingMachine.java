@@ -135,6 +135,8 @@ public class VendingMachine {
 		printLine("장소: " + getAddress());
 		printNoLine("품명:	");		
 		printLine("자판기 설치 년도: " + getBuiltYear());
+		printLine("결제: " + getPaymentTool(getAvailablePayment()));
+		printLine("신분증 요구: " + checkId18(isRequiredID()));
 		printLine("===================================================================");
 		printLine();
 	}

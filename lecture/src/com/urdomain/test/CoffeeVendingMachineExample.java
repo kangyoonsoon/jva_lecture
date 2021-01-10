@@ -66,9 +66,9 @@ public class CoffeeVendingMachineExample {
 		// 구매목록 보여주기
 		coffee.showPurchasedItems();
 		// 현재까지 수익을 확인한다.
-		printLine("=======================");
+		printLine("==========================");
 		printLine("자판기 총 수입: "+coffee.getTotalMoney() + "원");
-		printLine("=======================");
+		printLine("==========================");
 
 		
 	}

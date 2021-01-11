@@ -3,22 +3,6 @@ package com.urdomain.test;
 import java.util.Scanner; 
 
 public class VendingMachineExample {
-
-	public static void printLine(Customer c) {
-		System.out.println(c);
-	}
-	public static void printLine() {
-		System.out.println();
-	}
-	public static void printLine(String str) {
-		System.out.println(str);
-	}
-	public static void printLine(int a) {
-		System.out.println(a);
-	}
-	public static void printn(String str) {
-		System.out.print(str);
-	}
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -72,5 +56,21 @@ public class VendingMachineExample {
 		printLine("=======================");
 		printLine("자판기 총 수입: "+vm.getTotalMoney() + "원");
 		printLine("=======================");
+	}
+	
+	public static void printLine(Customer c) {
+		System.out.println(c);
+	}
+	public static void printLine() {
+		System.out.println();
+	}
+	public static void printLine(String str) {
+		System.out.println(str);
+	}
+	public static void printLine(int a) {
+		System.out.println(a);
+	}
+	public static void printn(String str) {
+		System.out.print(str);
 	}
 }

@@ -1,0 +1,33 @@
+package com.urdomain.ch06;
+
+public class Car210Example {
+
+	public static void main(String[] args) {
+		Car210 car1 = new Car210();
+		System.out.println("car1.company: " + car1.company);
+		System.out.println("---------------");
+		
+		Car210 car2 = new Car210("자가용");
+		System.out.println("car2.company: " + car2.company);
+		System.out.println("car2.model: " + car2.model);
+		System.out.println("---------------");
+		
+		Car210 car3 = new Car210("상업용", "빨강");
+		System.out.println("car3.company: " + car3.company);
+		System.out.println("car3.model: " + car3.model);
+		System.out.println("car3.color: " + car2.color);
+		System.out.println("---------------");
+		
+		Car210 car4 = new Car210("택시", "검정", 200);
+		System.out.println("car4.company: " + car4.company);
+		System.out.println("car4.model: " + car4.model);
+		System.out.println("car4.color: " + car4.color);
+		System.out.println("car4.maxSpeed: " + car4.maxSpeed);
+		System.out.println("---------------");
+		
+		Car210 car5 = new Car210("쌍용자동차", 150);
+		System.out.println("car5.company: " + car5.company);
+		System.out.println("car5.maxSpeed: " + car5.maxSpeed);
+			}
+
+}

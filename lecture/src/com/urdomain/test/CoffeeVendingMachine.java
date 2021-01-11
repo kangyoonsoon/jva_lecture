@@ -92,7 +92,8 @@ public class CoffeeVendingMachine extends VendingMachine {
 		}
 	}
 
-	// 커피 자판기 상태 
+
+	// 커피 자판기 상태 보여주기
 	public void showCoffeeVendingMachineStatus() {
 		super.showVendingMachineStatus();
 		printLine("--- 커피 자판기 상태 ---");

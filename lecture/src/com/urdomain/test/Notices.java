@@ -1,17 +1,21 @@
 package com.urdomain.test;
 
 public class Notices extends BulletinBoard  {
-	boolean isEmphasis;
+	int emphasis;
 
 	
-	public Notices (String title, String name, String id, String date, boolean isEmphasis) {
+	public Notices (String title, String name, String id, String date, int emphasis) {
 		super(title, name, id, date);
-		this.isEmphasis = isEmphasis;
+		this.emphasis = emphasis;
 	}
 	
-	public void inputArticle(boolean isEmphasis) {
-		if(isEmphasis) {
-			//게시글 위치 변경
+	@Override
+	public void inputArticle(int num) {
+	
+		if(num == 1) {
+			System.out.println("공지사항을 썼습니다.");
+		} else {
+			super.inputArticle(2);
 		}
 		
 	}

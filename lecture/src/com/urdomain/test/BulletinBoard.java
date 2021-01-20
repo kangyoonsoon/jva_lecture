@@ -1,6 +1,6 @@
 package com.urdomain.test;
 
-public class BulletinBoard {
+public class BulletinBoard extends Board {
 	String title;
 	String name;
 	String id;
@@ -15,8 +15,8 @@ public class BulletinBoard {
 		this.date = date;
 	}
 	
-	public void inputArticle() {
-		
+	public void inputArticle(int num) {
+		System.out.println("게시판에 글을 썼습니다.~");
 	}
 	
 	public void getIdprofile(String id) {

@@ -17,6 +17,6 @@ public class NewInstanceExample {
 			e.printStackTrace();
 		}
 	}
-
+	
 }
 	
